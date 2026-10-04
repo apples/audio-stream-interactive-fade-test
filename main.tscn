@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bry7k1nnedqlo"]
+
+[ext_resource type="Script" uid="uid://78emd0pk7kud" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="AudioStream" uid="uid://bgrko3krt3ust" path="res://audio_stream_interactive.tres" id="2_h2yge"]
+
+[node name="Main" type="Control" unique_id=985412112]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xm2m")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2066787909]
+stream = ExtResource("2_h2yge")
+autoplay = true
+
+[node name="Button" type="Button" parent="." unique_id=183234052]
+layout_mode = 0
+anchor_left = 0.4210069
+anchor_top = 0.42245376
+anchor_right = 0.5607639
+anchor_bottom = 0.5378087
+offset_bottom = -3.0517578e-05
+text = "Cue Drum"
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=40329884]
+layout_mode = 0
+anchor_left = 0.31141496
+anchor_top = 0.21990745
+anchor_right = 0.68164074
+anchor_bottom = 0.28163585
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=2014519666]
+layout_mode = 2
+text = "Current track:"
+metadata/_edit_use_anchors_ = true
+
+[node name="TrackLabel" type="Label" parent="HBoxContainer" unique_id=1419044234]
+unique_name_in_owner = true
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

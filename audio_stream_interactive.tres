@@ -1,0 +1,27 @@
+[gd_resource type="AudioStreamInteractive" format=3 uid="uid://bgrko3krt3ust"]
+
+[ext_resource type="AudioStream" uid="uid://dai4ik7wuoful" path="res://battleraft_menu_theme.ogg" id="1_o428d"]
+[ext_resource type="AudioStream" uid="uid://b3omgpibt1b5n" path="res://drum.ogg" id="2_rulhe"]
+[ext_resource type="AudioStream" uid="uid://bxx0cdg5i3o8u" path="res://silence_1second.ogg" id="3_cxf04"]
+
+[resource]
+clip_count = 3
+clip_0/name = &"Battleraft Menu Theme"
+clip_0/stream = ExtResource("1_o428d")
+clip_0/auto_advance = 0
+clip_1/name = &"Drum"
+clip_1/stream = ExtResource("2_rulhe")
+clip_1/auto_advance = 0
+clip_2/name = &"Silence 1 Second"
+clip_2/stream = ExtResource("3_cxf04")
+clip_2/auto_advance = 0
+_transitions = {
+Vector2i(0, 1): {
+"fade_beats": 1.0,
+"fade_mode": 0,
+"filler_clip": 2,
+"from_time": 0,
+"to_time": 1,
+"use_filler_clip": true
+}
+}
